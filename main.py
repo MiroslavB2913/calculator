@@ -34,7 +34,7 @@ def ask_age():
      num2 = ''
      g = ''
      dr = 1
-     go = ''
+     
      
      
      while num1 == '' or sign == '' or num2 == '' :
@@ -51,9 +51,13 @@ def ask_age():
            raise ValueError
            
        
-          
+         if sign == '//':
+                num2 = num1 = int(input('Input your number:'))
+                print('')
+                sqrt = math.sqrt(num1)
+                print('the square root of ', str(num1) , 'this' , str(sqrt))
         
-             if sign == '+' or sign == '-' or sign == '*' or sign == '/' or sign == '**':
+         if sign == '+' or sign == '-' or sign == '*' or sign == '/' or sign == '**':
                num1 = int(input('Input your number 1:'))
                if num1<= 999999 :
                  print()
@@ -85,13 +89,9 @@ def ask_age():
     
                  
     
-             if sign == '//':
-               num2 = num1 = int(input('Input your number:'))
-               print('')
-               sqrt = math.sqrt(num1)
-               print('the square root of ', str(num1) , 'this' , str(sqrt))
+              
                
-               go = math.sqrt(num1)
+             
 
 
           
@@ -106,7 +106,7 @@ def ask_age():
            
      if sign == '**' and num1 <= 100 and num2 <=100:
          print(num1,sign,num2, '=', num1**num2 )
-         go = num1**num2
+        
          
          
    
@@ -115,22 +115,22 @@ def ask_age():
            
        if sign == '+':
          print(num1,sign,num2, '=',num1+num2)
-         go = num1+num2
+        
          
       
   
        elif sign == '/':
          try:
              print(num1,sign,num2,'=', num1/num2)
-             go = num1/num2
+            
          except:
    				          print('This is division by zero!!!')
        elif sign == '-':
          print(num1,sign, num2, '=', num1-num2)
-         go = num1-num2
+       
        elif sign == '*':
          print(num1,sign,num2, '=', num1*num2)
-         go = num1*num2
+         
 
          
      time.sleep(2)
