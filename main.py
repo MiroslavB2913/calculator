@@ -34,8 +34,12 @@ def ask_age():
            print()
          else:
            num1 >= 999999
+         
   
   
+           raise ValueError
+         if sign == '**' and num1 > 100 :
+           print('your number is too big for "**"')
            raise ValueError
   
         
@@ -45,8 +49,12 @@ def ask_age():
            print()
          else:
            num2 >= 999999
+    
   
     
+           raise ValueError
+         if sign == '**' and num2 > 100 :
+           print('your number is too big for "**"')
            raise ValueError
 
       
@@ -62,13 +70,15 @@ def ask_age():
   
   
            
-  
+     if sign == '**' and num1 <= 100 and num2 <=100:
+         print(num1,sign,num2, '=', num1**num2)
+   
+     else:
         
            
        if sign == '+':
          print(num1,sign,num2, '=',num1+num2)
-       elif sign == '**':
-         print(num1,sign,num2, '=', num1**num2)
+      
   
        elif sign == '/':
          try:
