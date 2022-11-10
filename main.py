@@ -3,13 +3,6 @@ import math
 
 
 
-def fun(func):
-  def wrapper():
-    
-		  func()
-      
-  return wrapper
-
 
 def ask_age():
   s = 1
@@ -155,17 +148,6 @@ def ask_age():
            print('')
            time.sleep(1)
        
-     
-  
-    
-     
-    
-       
-     
-  
-     
-        
 
-   
 
 ask_age()
