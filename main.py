@@ -55,7 +55,7 @@ def ask_age():
                if num1<= 999999 :
                  print()
                else:
-                 num1 >= 999999
+                 num1 > 999999
                
         
         
@@ -71,7 +71,7 @@ def ask_age():
                if num2<= 999999 :
                  print()
                else:
-                 num2 >= 999999
+                 num2 > 999999
           
         
           
@@ -106,22 +106,22 @@ def ask_age():
      else:
         
            
-       if sign == '+':
+       if sign == '+' and num2 <=999999:
          print(num1,sign,num2, '=',num1+num2)
         
          
       
   
-       elif sign == '/':
+       elif sign == '/'  and num2 <=999999:
          try:
              print(num1,sign,num2,'=', num1/num2)
             
          except:
    				          print('This is division by zero!!!')
-       elif sign == '-':
+       elif sign == '-' and num2 <=999999:
          print(num1,sign, num2, '=', num1-num2)
        
-       elif sign == '*':
+       elif sign == '*' and num2 <=999999:
          print(num1,sign,num2, '=', num1*num2)
          
 
