@@ -2,19 +2,20 @@ import time
 import math
 import random
 
+
+
+ 		
+
 dr = 1
 t = ''
 r = ''
 ran1 = ''
 ran2 = ''
 a = ''
-num1 = ''
-sign = ''
-num2 = ''
-g = ''
+
 a = (input('choose your language (print "Eng" or "Rus") : '))
 if a == 'Eng':
-  
+    print('')
     r = (input('Do you want to use calculator or random? (print "Cal" or "Rand") : '))
     if r == 'Rand': 
      try:
@@ -34,10 +35,13 @@ if a == 'Eng':
       print('')
       print('The program has been stopped')
 
+      
+
 
       
      except ValueError:
        print('use only numbers! ')
+        
        
 
     elif r == 'Cal':
@@ -73,7 +77,10 @@ if a == 'Eng':
         
         while s == 1:
 
-           
+           num1 = ''
+           sign = ''
+           num2 = ''
+           g = ''
            
            
            
@@ -153,22 +160,22 @@ if a == 'Eng':
            else:
               
                  
-             if sign == '+' and num2 <=999999:
+              if sign == '+' and num2 <=999999:
                print(num1,sign,num2, '=',num1+num2)
               
                
             
         
-             elif sign == '/'  and num2 <=999999:
+              elif sign == '/'  and num2 <=999999:
                try:
                    print(num1,sign,num2,'=', num1/num2)
                   
                except:
          				          print('This is division by zero!!!')
-             elif sign == '-' and num2 <=999999:
+              elif sign == '-' and num2 <=999999:
                print(num1,sign, num2, '=', num1-num2)
              
-             elif sign == '*' and num2 <=999999:
+              elif sign == '*' and num2 <=999999:
                print(num1,sign,num2, '=', num1*num2)
                
       
@@ -180,7 +187,8 @@ if a == 'Eng':
           
            
            while dr == 2:
-               g = str(input('do you want to continue in NEW window? (print "yes" or "no") :'))
+               
+               g = str(input('do you want to continue in a new window? (print "yes" or "no") :'))
              
                if g == 'yes':
                     print()
@@ -188,10 +196,10 @@ if a == 'Eng':
           
                elif g == 'no':
                      s = 2
-                     print('the program has been stopped')
+                     print('The program has been stopped')
                      dr = 1
                else:
-                 print('say only "yes" or "no"')
+                 print('print just "yes" or "no"')
                  print('')
                  time.sleep(1)
              
@@ -202,6 +210,7 @@ if a == 'Eng':
     
     
 elif a == 'Rus':
+    print('')
     r = (input('Вы хотите использовать калькулятор или рандом? (напишите "Кал" или "Ранд") : '))
     if r == 'Ранд': 
      try:
@@ -227,7 +236,7 @@ elif a == 'Rus':
        print('используйте только числа! ')
        
 
-    elif r == 'Cal':  
+    elif r == 'Кал':  
       def ask_age1():
         s = 1
         print('используйте "-" в знаке для вычитания')
