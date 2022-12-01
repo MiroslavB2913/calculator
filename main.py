@@ -1,3 +1,16 @@
+def otstup(func):
+	def wrapper():
+		func()
+		print('--------------------------------')
+	return wrapper
+
+def oshibka(func):
+	def wrapper():
+		func()
+		print('you made a mistake')
+	return wrapper
+
+
 import time
 import math
 import random
@@ -14,9 +27,12 @@ ran2 = ''
 a = ''
 
 a = (input('choose your language (print "Eng" or "Rus") : '))
+
+
 if a == 'Eng':
+      
     print('')
-    r = (input('Do you want to use calculator or random? (print "Cal" or "Rand") : '))
+    r = (input('Do you want to use program like a calculator or random? (print "Cal" or "Rand") : '))
     if r == 'Rand': 
      try:
       ran1 = int(input('input where the countdown starts:'))
@@ -57,7 +73,7 @@ if a == 'Eng':
        
   
   
-
+      @otstup	
       def ask_age():
         s = 1
         print('use "-" in sign to subtract')
@@ -211,8 +227,8 @@ if a == 'Eng':
     
 elif a == 'Rus':
     print('')
-    r = (input('Вы хотите использовать калькулятор или рандом? (напишите "Кал" или "Ранд") : '))
-    if r == 'Ранд': 
+    op = (input('Вы хотите использовать программу как калькулятор или рандомайзер? (напишите "Кал" или "Ранд") : '))
+    if op == 'Ранд': 
      try:
       ran1 = int(input('введите начало отсчета:'))
       if ran1 > 0 or ran1 < 0:
@@ -236,7 +252,8 @@ elif a == 'Rus':
        print('используйте только числа! ')
        
 
-    elif r == 'Кал':  
+    elif op == 'Кал': 
+      @otstup	
       def ask_age1():
         s = 1
         print('используйте "-" в знаке для вычитания')
@@ -320,6 +337,7 @@ elif a == 'Rus':
                    
       
       
+
                 
              except ValueError:
                   
@@ -384,8 +402,12 @@ elif a == 'Rus':
           
       
       ask_age1()
+    
     else:
-      print('pon')
+      @oshibka
+      def qwe():
+        print()
+      qwe()
 
 
 else:
