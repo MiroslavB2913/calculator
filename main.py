@@ -1,16 +1,4 @@
-def otstup(func):
-	def wrapper():
-		func()
-		print('--------------------------------')
-	return wrapper
-
-def oshibka(func):
-	def wrapper():
-		func()
-		print('you made a mistake')
-	return wrapper
-
-
+import os
 import time
 import math
 import random
@@ -29,11 +17,11 @@ a = ''
 a = (input('choose your language (print "Eng" or "Rus") : '))
 
 
-if a == 'Eng':
+if a == 'Eng' or a == 'eng':
       
     print('')
     r = (input('Do you want to use program like a calculator or random? (print "Cal" or "Rand") : '))
-    if r == 'Rand': 
+    if r == 'Rand' or r == 'rand': 
      try:
       ran1 = int(input('input where the countdown starts:'))
       if ran1 > 0 or ran1 < 0:
@@ -60,7 +48,7 @@ if a == 'Eng':
         
        
 
-    elif r == 'Cal':
+    elif r == 'Cal' or r == 'cal':
     
       
     
@@ -73,23 +61,10 @@ if a == 'Eng':
        
   
   
-      @otstup	
+      
       def ask_age():
         s = 1
-        print('use "-" in sign to subtract')
-        time.sleep(0.5)
-        print('use "+" in sign to fold')
-        time.sleep(0.5)
-        print('use "*" in sign to multiply')
-        time.sleep(0.5)
-        print('use "/" in sign to devision')
-        time.sleep(0.5)
-        print('use "**" in sign to exponentiation')
-        time.sleep(0.5)
-        print('use "//" in sign to take the square root')
-        time.sleep(0.5)
-        print('')
-        print('')
+
         
         while s == 1:
 
@@ -97,7 +72,20 @@ if a == 'Eng':
            sign = ''
            num2 = ''
            g = ''
-           
+           print('use "-" in sign to subtract')
+           time.sleep(0.5)
+           print('use "+" in sign to fold')
+           time.sleep(0.5)
+           print('use "*" in sign to multiply')
+           time.sleep(0.5)
+           print('use "/" in sign to devision')
+           time.sleep(0.5)
+           print('use "**" in sign to exponentiation')
+           time.sleep(0.5)
+           print('use "//" in sign to take the square root')
+           time.sleep(0.5)
+           print('')
+           print('')           
            
            
            while num1 == '' or sign == '' or num2 == '' :
@@ -206,11 +194,12 @@ if a == 'Eng':
                
                g = str(input('do you want to continue in a new window? (print "yes" or "no") :'))
              
-               if g == 'yes':
+               if g == 'yes' or g == 'Yes':
                     print()
                     dr = 1
+                    os.system('cls||clear')
           
-               elif g == 'no':
+               elif g == 'no' or g == 'No':
                      s = 2
                      print('The program has been stopped')
                      dr = 1
@@ -225,10 +214,10 @@ if a == 'Eng':
 #-----------------------------------------------------------------------
     
     
-elif a == 'Rus':
+elif a == 'Rus' or a == 'rus':
     print('')
     op = (input('Вы хотите использовать программу как калькулятор или рандомайзер? (напишите "Кал" или "Ранд") : '))
-    if op == 'Ранд': 
+    if op == 'Ранд' or op == 'ранд': 
      try:
       ran1 = int(input('введите начало отсчета:'))
       if ran1 > 0 or ran1 < 0:
@@ -252,24 +241,11 @@ elif a == 'Rus':
        print('используйте только числа! ')
        
 
-    elif op == 'Кал': 
-      @otstup	
+    elif op == 'Кал' or op =='кал': 
+      
       def ask_age1():
         s = 1
-        print('используйте "-" в знаке для вычитания')
-        time.sleep(0.5)
-        print('используйте "+" в знаке для сложения')
-        time.sleep(0.5)
-        print('используйте "*" в знаке для умножения')
-        time.sleep(0.5)
-        print('используйте "/" в знаке для деления')
-        time.sleep(0.5)
-        print('используйте "**" в знаке для возведения в степень')
-        time.sleep(0.5)
-        print('используйте "//" в знаке для вычисления квадратного корня')
-        time.sleep(0.5)
-        print('')
-        print('')
+
         
         while s == 1:
            num1 = ''
@@ -277,7 +253,20 @@ elif a == 'Rus':
            num2 = ''
            g = ''
            dr = 1
-           
+           print('используйте "-" в знаке для вычитания')
+           time.sleep(0.5)
+           print('используйте "+" в знаке для сложения')
+           time.sleep(0.5)
+           print('используйте "*" в знаке для умножения')
+           time.sleep(0.5)
+           print('используйте "/" в знаке для деления')
+           time.sleep(0.5)
+           print('используйте "**" в знаке для возведения в степень')
+           time.sleep(0.5)
+           print('используйте "//" в знаке для вычисления квадратного корня')
+           time.sleep(0.5)
+           print('')
+           print('')
            
            
            while num1 == '' or sign == '' or num2 == '' :
@@ -386,11 +375,11 @@ elif a == 'Rus':
            while dr == 2:
                g = str(input('вы хотите продолжить в новом окне? (напишите "да" или "нет") :'))
              
-               if g == 'да':
+               if g == 'да' or g == 'Да':
                     print()
                     dr = 1
-          
-               elif g == 'нет':
+                    os.system('cls||clear')
+               elif g == 'нет' or g == 'Нет':
                      s = 2
                      print('программа была остановлена')
                      dr = 1
@@ -404,10 +393,8 @@ elif a == 'Rus':
       ask_age1()
     
     else:
-      @oshibka
-      def qwe():
-        print()
-      qwe()
+      
+     print()
 
 
 else:
